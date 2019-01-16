@@ -60,12 +60,12 @@ the following short definitions:
 
 -   Channel = A single analog-to-digital converter in the recording system that
     regularly samples the value of a transducer, which results in the signal
-    being represented as a time series in the digitized data. This can be connected to
-    two electrodes (to measure the potential difference between them), a
-    magnetic field or magnetic gradient sensor, temperature sensor,
+    being represented as a time series in the digitized data. This can be
+    connected to two electrodes (to measure the potential difference between
+    them), a magnetic field or magnetic gradient sensor, temperature sensor,
     accelerometer, etc.
 
-Although the *reference* and *ground* electrodes are often referred to as
+Although the _reference_ and _ground_ electrodes are often referred to as
 channels, they are in most common EEG systems not recorded by
 themselves. Therefore they are not represented as channels in the data.
 The type of referencing for all channels and optionally the location of
