@@ -83,6 +83,21 @@ toolbox web page and on the BESA wiki:
 [http://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined](http://www.fieldtriptoolbox.org/faq/how_are_the_different_head_and_mri_coordinate_systems_defined)
 [http://wiki.besa.de/index.php?title=Electrodes_and_Surface_Locations\#Coordinate_systems](http://wiki.besa.de/index.php?title=Electrodes_and_Surface_Locations#Coordinate_systems)
 
+## Intracranial EEG specific Coordinate Systems
+
+The first two pieces of information (origin, orientation) are specified in
+`XXXCoordinateSystem`, the units are specified in `XXXCoordinateSystemUnits`.
+
+Restricted keywords for the `XXXCoordinateSystem` field in the
+`coordsystem.json` file for iEEG datasets:
+
+-   `ACPC`: The origin of the coordinate system is at the Anterior Commissure
+    and the negative y-axis is passing through the Posterior Commissure. The
+    positive z-axis is passing through a mid-hemispheric point in the superior
+    direction. The anatomical landmarks are determined in the individual's
+    anatomical scan and no scaling or deformations have been applied to the
+    individual's anatomical scan.
+
 ## Template based Coordinate Systems
 
 The transformation of the real world geometry to an artificial frame of
