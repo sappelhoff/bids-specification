@@ -100,6 +100,7 @@ jobs:
               echo "Commit or Release, do nothing"
             fi
       - persist_to_workspace:
+          # raw generated changelog in ~/changelog_build/CHANGES.md
           root: ~/.
           paths: changelog_build
 
@@ -132,6 +133,7 @@ jobs:
               echo "Commit or Release, do nothing"
             fi
       - persist_to_workspace:
+          # fixed+linted changelog in ~/changelog_build/CHANGES.md
           root: ~/.
           paths: changelog_build
 
@@ -142,30 +144,11 @@ jobs:
     steps:
       - setup_remote_docker:
           version: 17.11.0-ce
-      - run:
-          name: where am i
-          command: |
-            sudo apt update
-            sudo apt-get install tree
-            pwd
-            ls
-            tree . -L 2
+      # checkout code to default ~/project
       - checkout
-      - run:
-          name: where am i
-          command: |
-            pwd
-            ls
-            tree . -L 2
       - attach_workspace:
-          # the freshly built CHANGES.md will be in ~/changelog_build/CHANGES.md
+          # fixed+linted changelog in ~/changelog_build/CHANGES.md
           at: ~/.
-      - run:
-          name: where am i
-          command: |
-            pwd
-            ls
-            tree . -L 2
       - deploy:
           name: Changelog deployment
           command: |
