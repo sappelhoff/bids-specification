@@ -64,7 +64,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: Download previously build changelog
-          uses: actions/download-artifact@v4
+          uses: actions/download-artifact@v5
           with:
             name: changelog_pre_lint
             path: ~/changelog_build
@@ -110,7 +110,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: Download previously build changelog
-          uses: actions/download-artifact@v4
+          uses: actions/download-artifact@v5
           with:
             name: changelog_post_lint
             path: ~/changelog_build
